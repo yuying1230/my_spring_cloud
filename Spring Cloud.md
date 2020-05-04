@@ -227,9 +227,9 @@ Maven分包分模块架构，一个project带着多个module子模块
 
 * 创建maven project
 
-![maven_project](images/maven_project.png)
+![maven_project](./images/maven_project.png)
 
-![maven_project_config](images/maven_project_config.png)
+![maven_project_config](./images/maven_project_config.png)
 
 **注意：micsrv_cloud_parent的packaging是pom模式**
 
@@ -241,9 +241,9 @@ Maven分包分模块架构，一个project带着多个module子模块
 
 * 创建maven module
 
-![maven_module_common_sub](images/maven_module_common_sub.png)
+![maven_module_common_sub](./images/maven_module_common_sub.png)
 
-![maven_module_common_sub_config](images/maven_module_common_sub_config.png)
+![maven_module_common_sub_config](./images/maven_module_common_sub_config.png)
 
 * 生成jar包在target目录下
 
@@ -595,7 +595,7 @@ public class DeptProvider9001App {
 
 * 测试
 
-![provider_test](images/provider_test.png)
+![provider_test](./images/provider_test.png)
 
 ####（4）部门为服务消费者模块
 
@@ -743,7 +743,7 @@ public class DeptControllerConsumer {
 
 * 测试
 
-![consumer_test](images/consumer_test.png)
+![consumer_test](./images/consumer_test.png)
 
 
 
@@ -785,11 +785,11 @@ Eureka Server作为服务注册功能的服务器，是服务注册中心。
 
 例如，zuul就是通过Eureka Server来发现系统中其他微服务的。
 
-![eureka](images/eureka.png)
+![eureka](./images/eureka.png)
 
 > dubbo
 
-![dubbo](images/dubbo.png)
+![dubbo](./images/dubbo.png)
 
 
 
@@ -910,7 +910,7 @@ public class EurekaServerApp {
 
 * 测试
 
-![eureka_server](images/eureka_server.png)
+![eureka_server](./images/eureka_server.png)
 
 
 
@@ -973,7 +973,7 @@ public class DeptProvider9001App {
 
 * 测试
 
-![eureka_service](images/eureka_service.png)
+![eureka_service](./images/eureka_service.png)
 
 
 
@@ -993,11 +993,11 @@ eureka:
 
 原名称：
 
-![eureka_service_instance_id](images/eureka_service_instance_name.png)
+![eureka_service_instance_id](./images/eureka_service_instance_name.png)
 
 修改后：
 
-![eureka_service_instance_name_new](images/eureka_service_instance_name_new.png)
+![eureka_service_instance_name_new](./images/eureka_service_instance_name_new.png)
 
 
 
@@ -1018,7 +1018,7 @@ eureka:
 
 info信息（浏览器左下角显示信息）：
 
-![eureka_service_info](images/eureka_service_info.png)
+![eureka_service_info](./images/eureka_service_info.png)
 
 
 
@@ -1028,7 +1028,7 @@ info信息（浏览器左下角显示信息）：
 
 点击微服务超链接的时候，网页响应404，如图所示：
 
-![eureka_service_information](images/eureka_serivice_information.png)
+![eureka_service_information](./images/eureka_serivice_information.png)
 
 
 
@@ -1092,7 +1092,7 @@ info:
 
 > 测试
 
-![eureka_service_information_new](images/eureka_service_information_new.png)
+![eureka_service_information_new](./images/eureka_service_information_new.png)
 
 
 
@@ -1100,7 +1100,7 @@ info:
 
 > 故障信息
 
-![eureka_emergency](images/eureka_emergency2.png)
+![eureka_emergency](./images/eureka_emergency2.png)
 
 说明：某一时刻某个微服务不可用，eureka不会立刻清理，会对白微服务的信息进行保存。
 
@@ -1182,7 +1182,7 @@ public class DeptProvider9001App {
 
 > 测试
 
-![micsrv_discovery_test](images/micsrv_discovery_test.png)
+![micsrv_discovery_test](./images/micsrv_discovery_test.png)
 
 
 
@@ -1269,7 +1269,7 @@ server:
 
 * 配置hosts文件映射
 
-![eureka_host](images/eureka_host.png)
+![eureka_host](./images/eureka_host.png)
 
 
 
@@ -1290,7 +1290,7 @@ eureka:
 
 * 测试
 
-![eureka集群](images/eureka_jiqun.png)
+![eureka集群](./images/eureka_jiqun.png)
 
 
 
@@ -1332,7 +1332,7 @@ P（Partition tolerance） -- 分区容错性
 
 * 经典CAP图
 
-![cap](images/cap.png)
+![cap](./images/cap.png)
 
 
 
@@ -2114,7 +2114,7 @@ public class DeptProvider9005App {
 
 #### （7）测试
 
-![hystrix1.png](images/hystrix1.png)
+![hystrix1.png](./images/hystrix1.png)
 
 
 
@@ -2246,13 +2246,13 @@ feign:
 
 #### （4）测试
 
-![hystrix2](images/hystrix2.png)
+![hystrix2](./images/hystrix2.png)
 
 
 
 > 关闭服务provider之后，再测试
 
-![hystrix_error_info](images/hystrix_error_info.png)
+![hystrix_error_info](./images/hystrix_error_info.png)
 
 此时，服务端provider已经down了，但是我们做了服务降级处理，让客户端在服务端不可用时也会获得提示信息而不会挂起耗死服务器。
 
@@ -2368,7 +2368,7 @@ public class ConsumerDashboard9001 {
 
 出现一只豪猪
 
-![hystrix_dashboard](images/hystrix_dashboard.png)
+![hystrix_dashboard](./images/hystrix_dashboard.png)
 
 
 
@@ -2378,7 +2378,7 @@ public class ConsumerDashboard9001 {
 
 页面会不断刷新进行监控
 
-![hystrix_single_monitor](images/single_hystrix_ping.png)
+![hystrix_single_monitor](./images/single_hystrix_ping.png)
 
 
 
@@ -2386,7 +2386,7 @@ public class ConsumerDashboard9001 {
 
 **填入监控参数信息**
 
-![hystrix_dashboard_input](images/hystrix_dashboard_input.png)
+![hystrix_dashboard_input](./images/hystrix_dashboard_input.png)
 
 delay：控制服务器上轮询监控信息的延迟时间，默认为2000ms，可以用过配置该属性来降低客户端的网络和CP消耗。
 
@@ -2396,7 +2396,7 @@ title：对应了头部标题Hystrix Stream之后的内容，默认会使用具�
 
 **可视化监控页面**
 
-![hystrix_dashboard_view](images/htstrix_dashboard_view.png)
+![hystrix_dashboard_view](./images/htstrix_dashboard_view.png)
 
 
 
@@ -2424,7 +2424,7 @@ title：对应了头部标题Hystrix Stream之后的内容，默认会使用具�
 
 曲线：用来记录2分钟内流量的相对变化，可以通过它来观察到流量的上升和下降趋势。
 
-![all_info1](images/all_info_1.png)
+![all_info1](./images/all_info_1.png)
 
 ![all_info2](images/all_info2.png)
 
