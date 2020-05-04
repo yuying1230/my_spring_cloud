@@ -1,0 +1,44 @@
+mybatis:
+  # mybatis整合	 
+  config-location: "classpath:mybatis/mybatis.cfg.xml"
+  mapper-locations: 
+    - "classpath:mybatis/mapper/**/**.xml"
+  type-aliases-package: com.lovestory.springcloud.entities
+  
+server: 
+  port: 9006
+  
+spring: 
+  application: 
+    name: micsrv-dept
+  datasource: 
+    dbcp2: 
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+      min-idle: 5
+    #driver-class-name: org.gjt.mm.mysql.driver
+    #driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root_123
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/sc_db02
+    username: root
+    
+eureka:
+  client:  # 客户端注册进Eureka服务列表内
+    service-url: 
+      # defaultZone: "http://localhost:9000/eureka"
+      defaultZone: http://eureka03.com:9003/eureka/,http://eureka02.com:9002/eureka/,http://eureka01.com:9000/eureka/
+  instance:
+    instance-id: micsrv-dept-provider-9006
+    prefer-ip-address: true
+
+info:
+  app-name: lovestory-micro-service-dept-provider-9006
+  company.name: lovestory
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+    
+    

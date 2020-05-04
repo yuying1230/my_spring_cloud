@@ -1,0 +1,5 @@
+com/lovestory/sc_demo/DeptProvider9005App.class
+com/lovestory/sc_demo/controller/DeptController.class
+com/lovestory/sc_demo/dao/DeptDao.class
+com/lovestory/sc_demo/service/DeptService.class
+com/lovestory/sc_demo/service/impl/DeptServiceImpl.class

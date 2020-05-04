@@ -1,0 +1,14 @@
+eureka:
+   client:
+      fetch-registry: false # false表示自己就是注册中心，职责就是维护服务实例，并不需要去检索服务
+      register-with-eureka: false # false表示不向注册中心注册自己，表示自己不是微服务提供方
+      service-url:
+# 单机版
+# defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # 设置与Eureka Server交互的地址查询服务和注册服务
+# 集群版
+         defaultZone: http://eureka02.com:9002/eureka/,http://eureka03.com:9003/eureka/
+   instance:
+# hostname: localhost # eureka服务端实例名称
+      hostname: eureka01.com # eureka服务端实例名称
+server:
+   port: 9000

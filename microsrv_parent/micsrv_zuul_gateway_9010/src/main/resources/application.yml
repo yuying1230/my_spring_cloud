@@ -1,0 +1,24 @@
+server:
+   port: 9010
+spring:
+   application:
+      name: micsrv-zuul-gateway # 注册进eureka的服务的名字
+eureka:
+   client:
+      service-url:
+         defaultZone: http://eureka03.com:9003/eureka/,http://eureka02.com:9002/eureka/,http://eureka01.com:9000/eureka/
+   instance:
+      instance-id: gateway-9010.com # 需要修改hosts文件做映射
+      prefer-ip-address: true
+info:
+   app-name: lovestory-micro-service-zuul-gateway-9010
+   company.name: lovestory
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+zuul:
+   prefix: /lovestory
+   # ignored-services: micsrv-dept  # 隐藏单个微服务
+   ignored-services: "*"  # 隐藏所有微服务
+   routes:
+      mydept.serviceId: micsrv-dept  # 访问的微服务名称
+      mydept.path: /mydept/**  # 映射微服务名称
